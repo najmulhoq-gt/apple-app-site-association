@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta http-equiv="refresh" content="0; URL=/.well-known/apple-app-site-association">
+    <title>Redirect</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const fileContent = atob("BASE64_ENCODED_CONTENT_HERE");
+            const blob = new Blob([fileContent], { type: "application/json" });
+            const url = URL.createObjectURL(blob);
+
+            // Redirect or serve as download
+            window.location.href = url;
+        });
+    </script>
 </head>
 <body>
-  Redirecting...
+    Redirecting...
 </body>
 </html>
