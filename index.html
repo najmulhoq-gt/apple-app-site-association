@@ -10,6 +10,7 @@
       try {
         // Fetch the apple-app-site-association file
         const response = await fetch('./.well-known/apple-app-site-association');
+        console.log(response);
         if (!response.ok) throw new Error('File not found');
 
         // Parse the JSON content
