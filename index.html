@@ -13,7 +13,7 @@
         const response = await fetch('./.well-known/apple-app-site-association');
         console.log(response);
         if (!response.ok) throw new Error('File not found');
-
+const data = await response.json();
         // Parse the JSON content
 const appDetails = data?.applinks?.details[0]?.appIDs[0];
 if (appDetails) {
